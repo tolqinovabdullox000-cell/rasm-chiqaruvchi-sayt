@@ -66,6 +66,6 @@ function kattaRasmniKorsat(manzil) {
 }
 
 function kattaKorsatishniTozalash() {
-  kattaKorsatish.innerHTML = '<span class="bosh-matn">Rasmni kattalashtirib ko\'rish uchun yuqoridagi rasmga bosing</span>';
+  kattaKorsatish.innerHTML = '<span class="bosh-matn">Rasmni kattalashtirib korish uchun yuqoridagi rasmga bosing</span>';
   delete kattaKorsatish.dataset.faolManzil;
 }
