@@ -17,43 +17,6 @@ faylInput.addEventListener('change', (event) => {
   faylInput.value = '';
 });
 
-function rasmniQoshish(fayl) {
-  const reader = new FileReader();
-
-  reader.onload = (e) => {
-    const manzil = e.target.result;
-
-    const rasmKonteyner = document.createElement('div');
-    rasmKonteyner.classList.add('rasm-elementi');
-
-    const img = document.createElement('img');
-    img.src = manzil;
-
-    const ochirishTugma = document.createElement('div');
-    ochirishTugma.classList.add('ochirish-tugma');
-    ochirishTugma.innerHTML = '&times;';
-
-    rasmKonteyner.appendChild(img);
-    rasmKonteyner.appendChild(ochirishTugma);
-
-    img.addEventListener('click', () => {
-      kattaRasmniKorsat(manzil);
-    });
-
-    ochirishTugma.addEventListener('click', (event) => {
-      event.stopPropagation();
-      rasmKonteyner.remove();
-
-      if (kattaKorsatish.dataset.faolManzil === manzil) {
-        kattaKorsatishniTozalash();
-      }
-    });
-
-    karopka.insertBefore(rasmKonteyner, qoshishTugma);
-  };
-
-  reader.readAsDataURL(fayl);
-}
 
 function kattaRasmniKorsat(manzil) {
   kattaKorsatish.innerHTML = '';
